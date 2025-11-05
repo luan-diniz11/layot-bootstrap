@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Streamly — Exemplo de Plataforma de Streaming (Bootstrap)</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="bg-dark text-white py-4 mb-4">
+      <div class="container text-center">
+        <h1 class="display-6">Streamly</h1>
+        <p class="lead">Descubra, assista e compartilhe — uma página exemplo com layout responsivo feita com Bootstrap.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- 1. Parágrafo introdutório dentro de um container centralizado -->
+      <section class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <p class="fs-5">Bem-vindo(a) ao Streamly — um protótipo de plataforma de streaming para a entrega desta atividade. Aqui mostramos como organizar conteúdo em containers, dividir textos em colunas, exibir cards responsivos com programas em destaque e ter um formulário de contato simples para feedback.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Texto dividido em colunas usando grid -->
+      <section class="mb-5">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h2>O que é o Streamly?</h2>
+            <p>O Streamly é um espaço imaginário onde usuários encontram vídeos curtos, séries e transmissões ao vivo. Esta seção explica a proposta em poucas linhas e usa o grid do Bootstrap para se adaptar aos diferentes tamanhos de tela.</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>Por que usar Bootstrap?</h2>
+            <p>Bootstrap acelera a criação de interfaces responsivas, com classes prontas para layout, cards e formulários. O resultado é um layout consistente que funciona bem em celulares, tablets e desktops.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Três cards com imagem e texto alinhados lado a lado em telas grandes -->
+      <section class="mb-5">
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://picsum.photos/seed/stream1/800/450" class="card-img-top" alt="Destaque 1">
+              <div class="card-body">
+                <h5 class="card-title">Destaque: Novidades</h5>
+                <p class="card-text">Confira os lançamentos da semana — séries, documentários e clipes recém-adicionados ao Streamly.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-primary">Assistir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://picsum.photos/seed/stream2/800/450" class="card-img-top" alt="Top Séries">
+              <div class="card-body">
+                <h5 class="card-title">Top Séries</h5>
+                <p class="card-text">Séries mais assistidas pelos usuários — maratonas, episódios e recomendações baseadas na comunidade.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-primary">Ver lista</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://picsum.photos/seed/stream3/800/450" class="card-img-top" alt="Ao Vivo">
+              <div class="card-body">
+                <h5 class="card-title">Ao Vivo Agora</h5>
+                <p class="card-text">Transmissões ao vivo de criadores e eventos — entre para assistir e participar do chat.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-primary">Entrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Formulário de contato (feedback) -->
+      <section class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Envie seu feedback</h3>
+                <p class="text-muted">Nos conte o que você achou do protótipo — não enviaremos dados para servidor real nesta entrega.</p>
+
+                <!-- container para mensagens geradas pelo JS -->
+                <div id="formAlert" class="mb-3"></div>
+
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="seu@exemplo.com" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Conte o que você gostou ou o que podemos melhorar" required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-success">Enviar feedback</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-light py-3 mt-5">
+      <div class="container text-center small">
+        &copy; 2025 Streamly — Protótipo de plataforma de streaming
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- Small client-side script: intercepta o envio do formulário e mostra feedback ao usuário -->
+    <script>
+      (function () {
+        const form = document.getElementById('contactForm');
+        const alertContainer = document.getElementById('formAlert');
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const nome = document.getElementById('nome').value.trim();
+
+          // Limpa alert anterior
+          alertContainer.innerHTML = '';
+
+          const alertBox = document.createElement('div');
+          alertBox.className = 'alert alert-success alert-dismissible fade show';
+          alertBox.role = 'alert';
+          alertBox.innerHTML = '<strong>Obrigado, ' + (nome || 'amigo') + '!</strong> Recebemos seu feedback.';
+
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'btn-close';
+          btn.setAttribute('data-bs-dismiss', 'alert');
+          btn.setAttribute('aria-label', 'Close');
+
+          alertBox.appendChild(btn);
+          alertContainer.appendChild(alertBox);
+
+          form.reset();
+        });
+      })();
+    </script>
+  </body>
+</html>
